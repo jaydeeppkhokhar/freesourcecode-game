@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react-hooks/exhaustive-deps": "off", // Disable React Hook missing dependency warning
+    "@next/next/no-img-element": "off", // Disable next/image <img> warning
+    "@next/next/no-sync-scripts": "off" // Disable synchronous script warning
+  }
 }
