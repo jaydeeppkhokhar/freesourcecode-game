@@ -24,10 +24,10 @@ const Category = () => {
       <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         <div className="hidden md:flex md:w-2/5 p-4 md:p-5 rounded-md color-1  flex-col gap-3 md:gap-4 select-none">
           <h1 className="text-xl md:text-2xl font-medium drop-shadow-lg">
-            Online Games at GameX
+            Online Games at ArcadeHub.io
           </h1>
           <p className="text-sm md:text-base">
-            GameX features the latest and best free online games. You can enjoy
+            ArcadeHub.io features the latest and best free online games. You can enjoy
             playing fun games without interruptions from downloads, intrusive
             ads, or pop-ups. Just load up your favorite games instantly in your
             web browser and enjoy the experience.
@@ -43,17 +43,15 @@ const Category = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <button
-            className={`p-2 text-white bg-black/60 absolute top-1/2 left-0 z-10 transform -translate-y-1/2 w-8 md:w-10 h-full transition-opacity duration-300 ease-in-out ${
-              isHovered ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+            className={`p-2 text-white bg-black/60 absolute top-1/2 left-0 z-10 transform -translate-y-1/2 w-8 md:w-10 h-full transition-opacity duration-300 ease-in-out ${isHovered ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
             onClick={() => scroll("left")}
           >
             <FaChevronLeft />
           </button>
           <button
-            className={`p-2 text-white bg-black/60 absolute top-1/2 right-0 z-10 transform -translate-y-1/2 w-8 md:w-10 h-full transition-opacity duration-300 ease-in-out ${
-              isHovered ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+            className={`p-2 text-white bg-black/60 absolute top-1/2 right-0 z-10 transform -translate-y-1/2 w-8 md:w-10 h-full transition-opacity duration-300 ease-in-out ${isHovered ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
             onClick={() => scroll("right")}
           >
             <FaChevronRight />

@@ -8,7 +8,7 @@ import { FaPlayCircle } from "react-icons/fa";
 
 const PageClient = ({ id }) => {
   // const params = useSearchParams();
-  const GmaeId = id;
+  const GameId = id;
 
   const iframeRef = useRef(null);
   const [gameData, setGameData] = useState([]);
@@ -16,7 +16,7 @@ const PageClient = ({ id }) => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch(`/api/game?id=${GmaeId}`);
+        const response = await fetch(`/api/game?id=${GameId}`);
         const data = await response.json();
         setGameData(data);
       } catch (error) {
@@ -25,7 +25,7 @@ const PageClient = ({ id }) => {
     };
 
     fetchGames();
-  }, [GmaeId]);
+  }, [GameId]);
 
   const handleFullscreen = () => {
     if (iframeRef.current) {
