@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set working directory
-WORKDIR /app
+# WORKDIR /app
 
 # Copy package.json and package-lock.json (or yarn.lock) first to leverage Docker cache
 COPY package*.json ./
