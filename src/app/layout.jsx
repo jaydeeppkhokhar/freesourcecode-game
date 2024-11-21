@@ -60,6 +60,8 @@ export default function RootLayout({ children }) {
         </Providers>
 
         <Footer />
+
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="113526" async data-cfasync="false"></script>
       </body>
     </html>
   );
