@@ -8,15 +8,15 @@ export async function GET(req, res) {
 
   try {
     const db = getDatabase(app);
-    
+
     if (id) {
       // Search by ID if provided
-      const gameRef = ref(db, `pokix/category/${id}`);
+      const gameRef = ref(db, `ArcadeHub/category/${id}`);
       const snapshot = await get(gameRef);
 
       if (snapshot.exists()) {
         const gameData = snapshot.val();
-        
+
         // Increment the view count by 1
         const newViewCount = (gameData.view || 0) + 1;
         await update(gameRef, { view: newViewCount });
@@ -27,9 +27,9 @@ export async function GET(req, res) {
       }
     } else {
       // Fetch all data if no ID is provided
-      const gamesRef = ref(db, 'pokix/category');
+      const gamesRef = ref(db, 'ArcadeHub/category');
       const snapshot = await get(gamesRef);
-  
+
       if (snapshot.exists()) {
         const data = snapshot.val();
         const dataArray = Object.entries(data).map(([id, item]) => ({ id, ...item }));
@@ -50,7 +50,7 @@ export async function POST(req, res) {
     const db = getDatabase(app);
     const data = await req.json();
     data["date"] = new Date().toISOString();
-    const gamesRef = ref(db, 'pokix/category');
+    const gamesRef = ref(db, 'ArcadeHub/category');
     const newGameRef = push(gamesRef); // Generate a new unique key
     await set(newGameRef, { ...data, view: 0 }); // Initialize view count to 0
     return new Response(JSON.stringify({ id: newGameRef.key, message: "Data added successfully" }), { status: 200 });
@@ -74,11 +74,11 @@ export async function DELETE(req, res) {
     }
 
     const db = getDatabase(app);
-    const gameRef = ref(db, `pokix/category/${id}`);
-    
+    const gameRef = ref(db, `ArcadeHub/category/${id}`);
+
     // Remove the item from Firebase
     await remove(gameRef);
-    
+
     return new Response(JSON.stringify({ message: "Data deleted successfully" }), { status: 200 });
   } catch (error) {
     console.error("Error deleting data:", error);
@@ -109,10 +109,10 @@ export async function PUT(req, res) {
     }
 
     const db = getDatabase(app);
-    const gameRef = ref(db, `pokix/category/${id}`);
+    const gameRef = ref(db, `ArcadeHub/category/${id}`);
 
     // Log the reference path and data for debugging
-    console.log("Updating path:", `pokix/category/${id}`);
+    console.log("Updating path:", `ArcadeHub/category/${id}`);
     console.log("Data to update:", data);
 
     // Perform the update

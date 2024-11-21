@@ -12,7 +12,8 @@ const TopArea = () => {
         const response = await fetch("/api/game");
         const data = await response.json();
 
-        const sortedGames = data.sort((a, b) => b.view - a.view);
+        const sortedGames = data.filter((item) => item.inTop === true).sort((a, b) => b.view - a.view);
+
         setGames(sortedGames);
       } catch (error) {
         console.error("Error fetching games:", error);
@@ -57,8 +58,8 @@ const TopArea = () => {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-5">
-          <Link href={`/play/${games[1]?.id}`}>
-          <img
+            <Link href={`/play/${games[1]?.id}`}>
+              <img
                 src={games[1]?.gameImage}
                 className="h-20 md:h-28 w-full rounded-md"
                 alt={`Game Image ${games[1]?.gameTitle}`}
@@ -87,8 +88,8 @@ const TopArea = () => {
             </Link>
           </div>
           <div>
-          <Link href={`/play/${games[5]?.id}`}>
-          <img
+            <Link href={`/play/${games[5]?.id}`}>
+              <img
                 className="h-40 md:h-64 w-full rounded-md"
                 src={games[5]?.gameImage}
                 alt={`Game Image ${games[5]?.gameTitle}`}

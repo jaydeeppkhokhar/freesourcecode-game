@@ -26,16 +26,24 @@ export default function Home() {
         <NewGame />
       </div>
       <div>
-        <h1 className="my-4 font-semibold text-xl">Car Games</h1>
-        <NewGame filterData="Car" />
+        <h1 className="my-4 font-semibold text-xl">Adventure Games</h1>
+        <NewGame filterData="Adventure" />
       </div>
       <div>
-        <h1 className="my-4 font-semibold text-xl">Multiplayer Games</h1>
-        <NewGame filterData="Multiplayer" />
+        <h1 className="my-4 font-semibold text-xl">Arcade Games</h1>
+        <NewGame filterData="Arcade" />
       </div>
       <div>
-        <h1 className="my-4 font-semibold text-xl">Shooting Games</h1>
-        <NewGame filterData="Shooting" />
+        <h1 className="my-4 font-semibold text-xl">Puzzle & Logic Games</h1>
+        <NewGame filterData="Puzzle & Logic" />
+      </div>
+      <div>
+        <h1 className="my-4 font-semibold text-xl">Sports & Racing Games</h1>
+        <NewGame filterData="Sports & Racing" />
+      </div>
+      <div>
+        <h1 className="my-4 font-semibold text-xl">Strategy Games</h1>
+        <NewGame filterData="Strategy" />
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ export async function GET(req, res) {
 
   try {
     if (id) {
-      const gameRef = ref(rtdb, `pokix/game/${id}`);
+      const gameRef = ref(rtdb, `ArcadeHub/games/${id}`);
       const snapshot = await get(gameRef);
 
       if (snapshot.exists()) {
@@ -42,7 +42,7 @@ export async function GET(req, res) {
         return new Response(JSON.stringify([]), { status: 404 });
       }
     } else {
-      const gamesRef = ref(rtdb, 'pokix/game');
+      const gamesRef = ref(rtdb, 'ArcadeHub/games');
       const snapshot = await get(gamesRef);
 
       if (snapshot.exists()) {
@@ -67,10 +67,9 @@ export async function POST(req, res) {
   try {
     const data = await req.json();
     data["date"] = new Date().toISOString();
-    const gamesRef = ref(rtdb, 'pokix/game');
-    const newGameRef = push(gamesRef); // Generate a new unique key
-    await set(newGameRef, { ...data, view: 0 }); // Initialize view count to 0
-    return new Response(JSON.stringify({ id: newGameRef.key, message: "Data added successfully" }), { status: 200 });
+    const gamesRef = ref(rtdb, 'ArcadeHub/games/' + data.metaUrl);
+    await set(gamesRef, { ...data, view: 0 });
+    return new Response(JSON.stringify({ id: data.metaUrl, message: "Data added successfully" }), { status: 200 });
   } catch (error) {
     console.error("Error adding data:", error);
     return new Response(JSON.stringify({ error: "Failed to add data" }), { status: 500 });
@@ -90,7 +89,7 @@ export async function DELETE(req, res) {
       return new Response(JSON.stringify({ error: "ID is required in query parameters" }), { status: 400 });
     }
 
-    const gameRef = ref(rtdb, `pokix/game/${id}`);
+    const gameRef = ref(rtdb, `ArcadeHub/games/${id}`);
     await remove(gameRef);
 
     return new Response(JSON.stringify({ message: "Data deleted successfully" }), { status: 200 });
@@ -118,7 +117,7 @@ export async function PUT(req, res) {
       return new Response(JSON.stringify({ error: "Invalid data format" }), { status: 400 });
     }
 
-    const gameRef = ref(rtdb, `pokix/game/${id}`);
+    const gameRef = ref(rtdb, `ArcadeHub/games/${id}`);
     await update(gameRef, data);
 
     const updatedSnapshot = await get(gameRef);
