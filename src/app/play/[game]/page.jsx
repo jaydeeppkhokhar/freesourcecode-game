@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 
 export async function generateMetadata({ params, searchParams }) {
   const GameId = params.game;
-  const url_var = process.env.NEXT_PUBLIC_BASE_URL; // Get base URL from .env
+  const url_var = process.env.NEXT_PUBLIC_SITE_URL; // Get base URL from .env
 
   let gameData = {};
   try {

@@ -27,7 +27,7 @@ const Header = () => {
     >
       {/* Logo Section */}
       <div className="flex items-center h-full">
-        <Link href={process.env.NEXT_PUBLIC_BASE_URL} passHref>
+        <Link href={process.env.NEXT_PUBLIC_SITE_URL} passHref>
           <img
             className="h-full object-contain w-40"
             src="/logo.png"
