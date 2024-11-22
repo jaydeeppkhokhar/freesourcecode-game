@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'ArcadeHub.io - Play Free Online Games | Your Free Gaming Universe',
     description: 'Play free online games at ArcadeHub.io. We offer a large collection of games to play, from arcade classics to modern hits. Join now and start playing!',
-    url: 'https://arcadehub.io',
+    url: 'https://www.arcadehub.io',
     site_name: 'ArcadeHub.io',
     images: [
       {
