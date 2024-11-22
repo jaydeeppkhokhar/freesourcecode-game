@@ -17,7 +17,7 @@ const fetchGameRoutes = async () => {
 
 const config = {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    generateRobotsTxt: false, // Enable robots.txt generation
+    generateRobotsTxt: false, // Disable auto robots.txt generation
     exclude: ['/admin/*', '/api/*', '/login', '/admin'], // Exclude admin, API, and login pages
     robotsTxtOptions: {
         additionalSitemaps: [
