@@ -3,7 +3,6 @@ User-agent: *
 
 # Disallow admin or restricted routes
 Disallow: /admin/
-Disallow: /api/
 
 # Allow everything else
 Allow: /
