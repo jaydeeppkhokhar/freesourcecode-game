@@ -31,7 +31,7 @@ export async function generateMetadata({ params, searchParams }) {
     openGraph: {
       title: gameData.gameTitle,
       description: gameData.description,
-      url: `${url_var}/play?id=${gameData.id}`,
+      url: `${url_var}/play/${gameData.id}`,
       siteName: "GamePlay Site",
       images: [
         {
@@ -50,7 +50,7 @@ export async function generateMetadata({ params, searchParams }) {
       images: [gameData.gameImage],
     },
     alternates: {
-      canonical: `${url_var}/play?id=${gameData.id}`,
+      canonical: `${url_var}/play/${gameData.id}`,
     },
     robots: {
       index: true,
