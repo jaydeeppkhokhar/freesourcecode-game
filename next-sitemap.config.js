@@ -19,11 +19,7 @@ const config = {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     generateRobotsTxt: false, // Disable auto robots.txt generation
     exclude: ['/admin/*', '/api/*', '/login', '/admin'], // Exclude admin, API, and login pages
-    robotsTxtOptions: {
-        additionalSitemaps: [
-            `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/sitemap.xml`,
-        ],
-    },
+    generateIndexSitemap: false, // Ensure only a single sitemap file
     additionalPaths: async (config) => {
         const gameRoutes = await fetchGameRoutes();
         return gameRoutes.map((route) => ({
