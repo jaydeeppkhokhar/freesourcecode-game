@@ -52,6 +52,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={`dark text-foreground bg-background ${rubik.className}`}>
+        <div id="_AdQVAWidget_501991"></div>
         <a href="#content" className="sr-only focus:not-sr-only">Skip to main content</a>
 
         <Providers>
@@ -61,7 +62,8 @@ export default function RootLayout({ children }) {
 
         <Footer />
 
-        <script src="https://alwingulla.com/88/tag.min.js" data-zone="113526" async data-cfasync="false"></script>
+        <script type="text/javascript" src="https://native-hispanoads.ads1-adqva.com/ads/_AdQVAWidget_501991.js" async></script>
+        {/* <script src="https://alwingulla.com/88/tag.min.js" data-zone="113526" async data-cfasync="false"></script> */}
         <script src="./pet-cat/pet_cat.js"></script>
       </body>
     </html>
