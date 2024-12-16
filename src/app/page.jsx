@@ -8,6 +8,11 @@ export default function Home() {
   return (
     <div className="mx-6 py-10">
       <div>
+
+        {/* Header Ads */}
+        <div id="_AdQVAWidget_502001"></div>
+        <script type="text/javascript" src="https://native-hispanoads.ads1-adqva.com/ads/_AdQVAWidget_502001.js" async></script>
+
         <TopArea />
       </div>
       <div>
@@ -45,6 +50,15 @@ export default function Home() {
         <h1 className="my-4 font-semibold text-xl">Strategy Games</h1>
         <NewGame filterData="Strategy" />
       </div>
+
+      {/* In page push notification ads */}
+      <div id="_AdQVAWidget_502002"></div>
+      <script type="text/javascript" src="https://native-hispanoads.ads1-adqva.com/ads/_AdQVAWidget_502002.js" async></script>
+
+      {/* Article Infinite scroll Ads */}
+      <div id="_AdQVAWidget_501998"></div>
+      <script type="text/javascript" src="https://native-hispanoads.ads1-adqva.com/ads/_AdQVAWidget_501998.js" async></script>
+
     </div>
   );
 }
