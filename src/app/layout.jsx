@@ -51,6 +51,8 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}');
           `,
         }} />
+
+        <script data-cfasync="false" async type="text/javascript" src="//rugalnylon.com/geIn5yEBuph2RaR/114647"></script>
       </head>
 
       <body className={`dark text-foreground bg-background ${rubik.className}`}>
