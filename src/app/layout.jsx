@@ -39,6 +39,8 @@ export default function RootLayout({ children }) {
   return (
     <html className={`dark text-foreground bg-background ${rubik.className}`} lang="en">
       <head>
+        <meta name="galaksion-domain-verification" content="cff7f0809f69a51ca6c652ea135ae01c35880b21f11c1fdb711c55a31fc19cc5" />
+
         {/* Google Analytics */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}`} />
         <script dangerouslySetInnerHTML={{
