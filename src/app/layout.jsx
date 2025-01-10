@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
 
         <script data-cfasync="false" async type="text/javascript" src="//rugalnylon.com/geIn5yEBuph2RaR/114647"></script>
         <script data-cfasync="false" async type="text/javascript" src="//dx.torekareau.com/fRk5hrg3Btu/114648"></script>
+        <script data-cfasync="false" async type="text/javascript" src="//tv.hermsdhan.com/rw1s7WabQg0rcnmm/114649"></script>
       </head>
 
       <body className={`dark text-foreground bg-background ${rubik.className}`}>
