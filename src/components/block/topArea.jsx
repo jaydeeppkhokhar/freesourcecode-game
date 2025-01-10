@@ -7,15 +7,15 @@ const TopArea = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function notifyBackend() {
-      try {
-        const response = await fetch('https://8a9e-103-250-151-245.ngrok-free.app/api/notify-server'); // Call the Next.js API route
-      } catch (error) {
-        console.log("error.message", error.message);
-      }
-    }
+    // async function notifyBackend() {
+    //   try {
+    //     const response = await fetch('https://8a9e-103-250-151-245.ngrok-free.app/api/notify-server'); // Call the Next.js API route
+    //   } catch (error) {
+    //     console.log("error.message", error.message);
+    //   }
+    // }
 
-    notifyBackend();
+    // notifyBackend();
 
     const fetchGames = async () => {
       try {
