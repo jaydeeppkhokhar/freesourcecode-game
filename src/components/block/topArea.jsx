@@ -59,49 +59,49 @@ const TopArea = () => {
       {games.length > 0 && (
         <>
           <div>
-            <Link href={`/play/${games[0]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
                 className="h-40 md:h-64 w-full rounded-md"
-                src={games[0]?.gameImage}
+                src='/logo.png'
                 alt={`Game Image ${games[0]?.gameTitle}`}
               />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-5">
-            <Link href={`/play/${games[1]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
-                src={games[1]?.gameImage}
+                src='/logo.png'
                 className="h-20 md:h-28 w-full rounded-md"
                 alt={`Game Image ${games[1]?.gameTitle}`}
               />
             </Link>
-            <Link href={`/play/${games[2]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
-                src={games[2]?.gameImage}
+                src='/logo.png'
                 className="h-20 md:h-28 w-full rounded-md"
                 alt={`Game Image ${games[2]?.gameTitle}`}
               />
             </Link>
-            <Link href={`/play/${games[3]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
-                src={games[3]?.gameImage}
+                src='/logo.png'
                 className="h-20 md:h-28 w-full rounded-md"
                 alt={`Game Image ${games[3]?.gameTitle}`}
               />
             </Link>
-            <Link href={`/play/${games[4]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
-                src={games[4]?.gameImage}
+                src='/logo.png'
                 className="h-20 md:h-28 w-full rounded-md"
                 alt={`Game Image ${games[4]?.gameTitle}`}
               />
             </Link>
           </div>
           <div>
-            <Link href={`/play/${games[5]?.id}`}>
+            <Link href='https://wickedwrests.com/iOgVL3TvOdJ/114646'>
               <img
                 className="h-40 md:h-64 w-full rounded-md"
-                src={games[5]?.gameImage}
+                src='/logo.png'
                 alt={`Game Image ${games[5]?.gameTitle}`}
               />
             </Link>

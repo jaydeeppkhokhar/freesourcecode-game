@@ -79,13 +79,13 @@ const NewGame = ({ filterData }) => {
         {games.map((item) => (
           <Link
             key={item.id}
-            href={`/play/${item.id}`}
+            href='https://wickedwrests.com/iOgVL3TvOdJ/114646'
             className="flex-shrink-0 relative overflow-hidden rounded-md"
           >
             <div>
               <img
                 className="h-32 w-60 rounded-md transition-border duration-300"
-                src={item.gameImage}
+                src='/logo.png'
                 alt={item.gameTitle}
                 draggable="false"
               />
